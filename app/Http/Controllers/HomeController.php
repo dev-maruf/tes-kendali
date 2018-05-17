@@ -71,7 +71,7 @@ class HomeController extends Controller
 
     public function downloadSoal($path)
     {
-        $path = storage_path('app\\Soal\\'.$path);
+        $path = storage_path('app/Soal/'.$path);
         return response()->file($path);
     }
 
