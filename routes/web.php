@@ -47,5 +47,6 @@ Route::prefix('ngadmin')->group(function () {
         Route::post('addstudent', 'AdminController@import')->name('import-student');
         Route::post('setstudent', 'AdminController@setStudent')->name('set-student');
         Route::post('resettest', 'AdminController@resetTest')->name('reset-test');
+        Route::post('resetpassword', 'AdminController@resetPassword')->name('reset-password');
     });
 });

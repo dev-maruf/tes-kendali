@@ -91,6 +91,12 @@ class AdminController extends Controller
         return redirect()->back();
     }
 
+    public function resetPassword(Request $request)
+    {
+        \App\User::where('id', $request->userid)->update(['password'=>Hash::make("12345678")]);
+        return redirect()->back();
+    }
+
     public function resetTest(Request $request)
     {
         if($request->state == 1){

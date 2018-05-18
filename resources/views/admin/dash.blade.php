@@ -68,6 +68,12 @@
                                                     <button type="submit" class="btn btn-success waves-effect">Unblock</button>
                                                 </form>
                                                 @endif
+                                                <form method="POST" action="{{route('reset-password')}}">
+                                                    {{ csrf_field() }}
+                                                    <input type="hidden" id="state" name="state" value="1">
+                                                    <input type="hidden" id="userid" name="userid" value="{{$data['id']}}">
+                                                    <button type="submit" class="btn btn-danger waves-effect">Reset PW</button>
+                                                </form>
                                             </td>
                                         </tr>
                                         @endforeach
